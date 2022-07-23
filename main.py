@@ -7,7 +7,7 @@ def converter(temp_count, temp_name):
         temp_count = input('Введите правильное число: ')
     while temp_name not in ['c', 'C', 'f', 'F']:
         temp_name = input('Введите правильное наименование: ')
-    if temp_name == 'c' or 'C':
+    if temp_name in ['c', 'C']:
         farengaite = f'{int(temp_count) * 9 / 5 + 32:.5f}'
         result = f'Температура по Фаренгейту равняется: {farengaite} градусов'
         print(result)
