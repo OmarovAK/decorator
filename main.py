@@ -1,7 +1,9 @@
 import os
-from decorator import my_decor
+from decorator import param_decor
 
-@my_decor
+file = os.path.join(os.getcwd(), 'output.txt')
+
+@param_decor(file)
 def converter(temp_count, temp_name):
     while not temp_count.isdigit():
         temp_count = input('Введите правильное число: ')
